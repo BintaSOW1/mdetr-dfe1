@@ -1,0 +1,9 @@
+{
+    "combine_datasets": ["refexp"],
+    "combine_datasets_val": ["refexp"],
+    "refexp_dataset_name": "refcoco",
+    "coco_path": "../datasets/coco/",
+    "refexp_ann_path": "../datasets/mdetr_annotations/OpenSource/",
+    "epochs": 2,
+    "lr_drop": 3
+}

@@ -1,0 +1,59 @@
+Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.weight', 'roberta.pooler.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/usr/lib/python3.10/multiprocessing/popen_fork.py:66: RuntimeWarning: os.fork() was called. os.fork() is incompatible with multithreaded code, and JAX is multithreaded, so this will likely lead to a deadlock.
+  self.pid = os.fork()
+submitit ERROR (2024-05-10 15:14:13,270) - Submitted job triggered an exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/_submit.py", line 11, in <module>
+    submitit_main()
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 76, in submitit_main
+    process_job(args.folder)
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 69, in process_job
+    raise error
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 55, in process_job
+    result = delayed.result()
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/utils.py", line 133, in result
+    self._result = self.function(*self.args, **self.kwargs)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/run_with_submitit.py", line 100, in __call__
+    detection.main(self.args)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/main.py", line 512, in main
+    curr_test_stats = evaluate(
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/engine.py", line 149, in evaluate
+    for batch_dict in metric_logger.log_every(data_loader, 10, header):
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/util/metrics.py", line 133, in log_every
+    for obj in iterable:
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1346, in _next_data
+    return self._process_data(data)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/dataloader.py", line 1372, in _process_data
+    data.reraise()
+  File "/usr/local/lib/python3.10/dist-packages/torch/_utils.py", line 722, in reraise
+    raise exception
+FileNotFoundError: Caught FileNotFoundError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/usr/local/lib/python3.10/dist-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/datasets/coco.py", line 26, in __getitem__
+    img, target = super(ModulatedDetection, self).__getitem__(idx)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/coco.py", line 48, in __getitem__
+    image = self._load_image(id)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/coco.py", line 41, in _load_image
+    return Image.open(os.path.join(self.root, path)).convert("RGB")
+  File "/usr/local/lib/python3.10/dist-packages/PIL/Image.py", line 3227, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: 'content/datac/train2014/COCO_train2014_000000580957.jpg'
+

@@ -1,0 +1,46 @@
+Downloading: "https://download.pytorch.org/models/resnet101-cd907fc2.pth" to /root/.cache/torch/hub/checkpoints/resnet101-cd907fc2.pth
+  0%|          | 0.00/171M [00:00<?, ?B/s]  3%|▎         | 5.20M/171M [00:00<00:03, 54.5MB/s]  9%|▉         | 15.2M/171M [00:00<00:01, 84.4MB/s] 15%|█▍        | 25.4M/171M [00:00<00:01, 94.7MB/s] 21%|██        | 36.1M/171M [00:00<00:01, 101MB/s]  27%|██▋       | 46.7M/171M [00:00<00:01, 105MB/s] 34%|███▍      | 57.6M/171M [00:00<00:01, 108MB/s] 40%|███▉      | 67.9M/171M [00:00<00:01, 107MB/s] 46%|████▌     | 78.1M/171M [00:00<00:00, 106MB/s] 52%|█████▏    | 88.2M/171M [00:00<00:00, 104MB/s] 58%|█████▊    | 98.4M/171M [00:01<00:00, 105MB/s] 64%|██████▎   | 108M/171M [00:01<00:00, 89.3MB/s] 69%|██████▉   | 117M/171M [00:01<00:00, 88.5MB/s] 75%|███████▍  | 128M/171M [00:01<00:00, 93.6MB/s] 81%|████████  | 138M/171M [00:01<00:00, 97.3MB/s] 87%|████████▋ | 148M/171M [00:01<00:00, 101MB/s]  94%|█████████▍| 160M/171M [00:01<00:00, 108MB/s]100%|██████████| 171M/171M [00:01<00:00, 103MB/s]
+tokenizer_config.json:   0%|          | 0.00/25.0 [00:00<?, ?B/s]tokenizer_config.json: 100%|██████████| 25.0/25.0 [00:00<00:00, 144kB/s]
+vocab.json:   0%|          | 0.00/899k [00:00<?, ?B/s]vocab.json: 100%|██████████| 899k/899k [00:00<00:00, 14.5MB/s]
+merges.txt:   0%|          | 0.00/456k [00:00<?, ?B/s]merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 55.8MB/s]
+tokenizer.json:   0%|          | 0.00/1.36M [00:00<?, ?B/s]tokenizer.json: 100%|██████████| 1.36M/1.36M [00:00<00:00, 44.9MB/s]
+config.json:   0%|          | 0.00/481 [00:00<?, ?B/s]config.json: 100%|██████████| 481/481 [00:00<00:00, 3.00MB/s]
+model.safetensors:   0%|          | 0.00/499M [00:00<?, ?B/s]model.safetensors:   2%|▏         | 10.5M/499M [00:00<00:06, 74.0MB/s]model.safetensors:   6%|▋         | 31.5M/499M [00:00<00:04, 114MB/s] model.safetensors:  13%|█▎        | 62.9M/499M [00:00<00:02, 159MB/s]model.safetensors:  19%|█▉        | 94.4M/499M [00:00<00:02, 183MB/s]model.safetensors:  23%|██▎       | 115M/499M [00:00<00:02, 185MB/s] model.safetensors:  27%|██▋       | 136M/499M [00:00<00:02, 176MB/s]model.safetensors:  32%|███▏      | 157M/499M [00:00<00:01, 180MB/s]model.safetensors:  36%|███▌      | 178M/499M [00:01<00:01, 178MB/s]model.safetensors:  40%|███▉      | 199M/499M [00:01<00:01, 182MB/s]model.safetensors:  44%|████▍     | 220M/499M [00:01<00:01, 185MB/s]model.safetensors:  48%|████▊     | 241M/499M [00:01<00:01, 188MB/s]model.safetensors:  53%|█████▎    | 262M/499M [00:01<00:01, 189MB/s]model.safetensors:  57%|█████▋    | 283M/499M [00:01<00:01, 195MB/s]model.safetensors:  63%|██████▎   | 315M/499M [00:01<00:00, 197MB/s]model.safetensors:  67%|██████▋   | 336M/499M [00:01<00:00, 194MB/s]model.safetensors:  71%|███████▏  | 357M/499M [00:01<00:00, 192MB/s]model.safetensors:  76%|███████▌  | 377M/499M [00:02<00:00, 189MB/s]model.safetensors:  80%|███████▉  | 398M/499M [00:02<00:00, 187MB/s]model.safetensors:  84%|████████▍ | 419M/499M [00:02<00:00, 190MB/s]model.safetensors:  88%|████████▊ | 440M/499M [00:04<00:02, 26.0MB/s]model.safetensors:  92%|█████████▏| 461M/499M [00:04<00:01, 34.9MB/s]model.safetensors:  99%|█████████▉| 493M/499M [00:05<00:00, 51.7MB/s]model.safetensors: 100%|██████████| 499M/499M [00:05<00:00, 98.3MB/s]
+Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.dense.bias', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+submitit ERROR (2024-05-10 14:47:30,898) - Submitted job triggered an exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/_submit.py", line 11, in <module>
+    submitit_main()
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 76, in submitit_main
+    process_job(args.folder)
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 69, in process_job
+    raise error
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 55, in process_job
+    result = delayed.result()
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/utils.py", line 133, in result
+    self._result = self.function(*self.args, **self.kwargs)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/run_with_submitit.py", line 100, in __call__
+    detection.main(self.args)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/main.py", line 360, in main
+    [build_dataset(name, image_set="train", args=args) for name in args.combine_datasets]
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/main.py", line 360, in <listcomp>
+    [build_dataset(name, image_set="train", args=args) for name in args.combine_datasets]
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/datasets/__init__.py", line 51, in build_dataset
+    return build_refexp(image_set, args)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/datasets/refexp.py", line 109, in build
+    dataset = RefExpDetection(
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/datasets/coco.py", line 20, in __init__
+    super(ModulatedDetection, self).__init__(img_folder, ann_file)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/coco.py", line 36, in __init__
+    self.coco = COCO(annFile)
+  File "/usr/local/lib/python3.10/dist-packages/pycocotools/coco.py", line 84, in __init__
+    dataset = json.load(open(annotation_file, 'r'))
+FileNotFoundError: [Errno 2] No such file or directory: '/content/drive/MyDrive/mdetr_annotations/final_refexp_train.json'

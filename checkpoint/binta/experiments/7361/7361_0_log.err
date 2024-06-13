@@ -1,0 +1,38 @@
+Some weights of the model checkpoint at roberta-base were not used when initializing RobertaModel: ['lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.dense.bias', 'lm_head.layer_norm.weight', 'lm_head.dense.weight']
+- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+submitit ERROR (2024-05-10 14:55:28,555) - Submitted job triggered an exception
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/_submit.py", line 11, in <module>
+    submitit_main()
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 76, in submitit_main
+    process_job(args.folder)
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 69, in process_job
+    raise error
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/submission.py", line 55, in process_job
+    result = delayed.result()
+  File "/usr/local/lib/python3.10/dist-packages/submitit/core/utils.py", line 133, in result
+    self._result = self.function(*self.args, **self.kwargs)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/run_with_submitit.py", line 100, in __call__
+    detection.main(self.args)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/main.py", line 360, in main
+    [build_dataset(name, image_set="train", args=args) for name in args.combine_datasets]
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/main.py", line 360, in <listcomp>
+    [build_dataset(name, image_set="train", args=args) for name in args.combine_datasets]
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/datasets/__init__.py", line 51, in build_dataset
+    return build_refexp(image_set, args)
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/datasets/refexp.py", line 109, in build
+    dataset = RefExpDetection(
+  File "/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/datasets/coco.py", line 20, in __init__
+    super(ModulatedDetection, self).__init__(img_folder, ann_file)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/coco.py", line 36, in __init__
+    self.coco = COCO(annFile)
+  File "/usr/local/lib/python3.10/dist-packages/pycocotools/coco.py", line 84, in __init__
+    dataset = json.load(open(annotation_file, 'r'))
+FileNotFoundError: [Errno 2] No such file or directory: '/content/drive/MyDrive/mdetr_annotations/final_refexp_train.json'

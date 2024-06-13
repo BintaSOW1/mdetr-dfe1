@@ -1,0 +1,16 @@
+submitit INFO (2024-05-10 15:14:00,390) - Starting with JobEnvironment(job_id=12260, hostname=bc50e3130f34, local_rank=0(1), node=0(1), global_rank=0(1))
+submitit INFO (2024-05-10 15:14:00,392) - Loading pickle: /content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/checkpoint/binta/experiments/12260/12260_submitted.pkl
+Setting GLOO and NCCL sockets IFNAME to: eth0
+Process group: 1 tasks, rank: 0
+Not using distributed mode
+git:
+  sha: ea09acc44ca067072c4b143b726447ee7ff66f5f, status: has uncommited changes, branch: main
+
+Namespace(run_name='', dataset_config='configs/refcoco.json', do_qa=False, predict_final=False, no_detection=False, split_qa_heads=False, combine_datasets=['refexp'], combine_datasets_val=['refexp'], coco_path='content/datac/', vg_img_path='', vg_ann_path='', clevr_img_path='', clevr_ann_path='', phrasecut_ann_path='', phrasecut_orig_ann_path='', modulated_lvis_ann_path='', lr=0.0001, lr_backbone=1e-05, text_encoder_lr=5e-05, batch_size=4, weight_decay=0.0001, epochs=2, lr_drop=3, epoch_chunks=-1, optimizer='adam', clip_max_norm=0.1, eval_skip=1, schedule='linear_with_warmup', ema=True, ema_decay=0.9998, fraction_warmup_steps=0.01, frozen_weights=None, freeze_text_encoder=False, text_encoder_type='roberta-base', backbone='resnet101', dilation=False, position_embedding='sine', enc_layers=6, dec_layers=6, dim_feedforward=2048, hidden_dim=256, dropout=0.1, nheads=8, num_queries=100, pre_norm=False, pass_pos_and_query=True, mask_model='none', remove_difficult=False, masks=False, aux_loss=True, set_loss='hungarian', contrastive_loss=False, contrastive_align_loss=True, contrastive_loss_hdim=64, temperature_NCE=0.07, set_cost_class=1, set_cost_bbox=5, set_cost_giou=2, ce_loss_coef=1, mask_loss_coef=1, dice_loss_coef=1, bbox_loss_coef=5, giou_loss_coef=2, qa_loss_coef=1, eos_coef=0.1, contrastive_loss_coef=0.1, contrastive_align_loss_coef=1, test=False, test_type='test', output_dir=PosixPath('/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/checkpoint/binta/experiments/12260'), device='cuda', seed=42, resume='https://zenodo.org/record/4721981/files/refcoco_resnet101_checkpoint.pth', load='', start_epoch=0, eval=True, num_workers=2, world_size=1, dist_url='file:///content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/checkpoint/binta/experiments/60ccb4d8770e4696a6887af7339f61e0_init', partition=None, ngpus=1, nodes=1, timeout=4300, job_dir=PosixPath('/content/drive/.shortcut-targets-by-id/1AH0JByxrzaqnJ9Z6_OpI2C4rxuUEK3UM/mdetr/checkpoint/binta/experiments/%j'), mail='', gpu=0, rank=0, distributed=False, refexp_dataset_name='refcoco', refexp_ann_path='/content/drive/MyDrive/mdetr_annotations/')
+number of params: 185160324
+loading annotations into memory...
+Done (t=0.23s)
+creating index...
+index created!
+Evaluating refexp
+submitit ERROR (2024-05-10 15:14:13,270) - Submitted job triggered an exception
